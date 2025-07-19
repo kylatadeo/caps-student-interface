@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLB CAPS</title>
+    <link rel="icon" type="image/png" href="../general/icons/uplb-logo-no label.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+
+    <!-- from general folder -->
+    <link rel="stylesheet" href="../general/styles/general.css">
+    <link rel="stylesheet" href="../general/styles/header.css">
+    <link rel="stylesheet" href="../general/styles/sidebar-menu.css">
+    <script type="text/javascript" src="../general/general.js"></script>
+
+    <!-- student/course-planning -->
+    <link rel="stylesheet" href="styles/viewport.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="app.js"
+    defer></script>
+    <script type="text/javascript" src="charts.js"
+    defer></script>
+  </head>
+
+  <body>
+    <!-- Top Ribbon -->
+    <div id="navbar-container"></div>
+     
+    <!-- Side Bar Menu -->
+    <div id="sidebar-container"></div>       
+
+    <!-- Main Contents -->
+    <main> 
+      <div class="heading1 bg-maroon txt-16 txt-bold txt-white border-round4">COURSE PLANNING</div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="changeTab(0, 'student-info.html')">Student Dashboard</div>
+        <div class="tab inactive" onclick="changeTab(1, 'course-analytics.html')">Course Analytics</div>
+        <div class="tab inactive" onclick="changeTab(2, 'course-plan.html')">Course Recommendations</div>
+        <div class="tab inactive" onclick="changeTab(3, 'spmf.html')">Progress Monitoring</div>
+        <div class="tab inactive" onclick="changeTab(4, 'course-difficulty.html')">Course Difficulty Survey</div>
+    </div>
+
+    <!-- Tab Content (Dynamic Load) -->
+    <div class="content" id="tabContent">Loading...</div>
+    </main>
+
+    <!-- Overlay Container -->
+    <div id="preferencesOverlay" class="overlay hidden">
+      <div class="overlay-content width-540">
+        <iframe id="preferencesIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <div id="requestOverlay" class="overlay hidden">
+      <div class="overlay-content width-500">
+        <iframe id="requestIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </body>
+</html>
